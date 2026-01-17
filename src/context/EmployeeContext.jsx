@@ -1,10 +1,5 @@
-// src/context/EmployeeContext.jsx
 import { createContext, useContext, useState } from "react";
-
-// Create context
 const EmployeeContext = createContext();
-
-// Provider component
 export const EmployeeProvider = ({ children }) => {
   const [employees, setEmployees] = useState([
     {
@@ -27,12 +22,10 @@ export const EmployeeProvider = ({ children }) => {
     },
   ]);
 
-  // Add employee
   const addEmployee = (employee) => {
     setEmployees([...employees, { ...employee, id: Date.now() }]);
   };
 
-  // Edit employee
   const editEmployee = (updatedEmployee) => {
     setEmployees(
       employees.map((emp) =>
@@ -41,7 +34,6 @@ export const EmployeeProvider = ({ children }) => {
     );
   };
 
-  // Delete employee
   const deleteEmployee = (id) => {
     setEmployees(employees.filter((emp) => emp.id !== id));
   };
@@ -55,5 +47,4 @@ export const EmployeeProvider = ({ children }) => {
   );
 };
 
-// Custom hook
 export const useEmployees = () => useContext(EmployeeContext);

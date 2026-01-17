@@ -1,4 +1,3 @@
-// src/components/dashboard/EmployeeTable.jsx
 import { useState } from "react";
 import { useEmployees } from "../../context/EmployeeContext";
 import EmployeeForm from "../employee/EmployeeForm";

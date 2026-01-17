@@ -1,4 +1,3 @@
-// src/components/employee/EmployeeForm.jsx
 import { useState, useEffect } from "react";
 import { useEmployees } from "../../context/EmployeeContext";
 
@@ -14,7 +13,6 @@ const EmployeeForm = ({ onClose, employee }) => {
   const [preview, setPreview] = useState(employee?.image || null);
   const [error, setError] = useState("");
 
-  // Preview image
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -37,7 +35,7 @@ const EmployeeForm = ({ onClose, employee }) => {
       dob,
       state,
       active,
-      image: preview, // store preview URL for simplicity
+      image: preview, 
     };
 
     if (employee) {

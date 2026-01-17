@@ -25,4 +25,15 @@ search and filter employees, upload profile images, and print employee data.
 - Tailwind CSS
 - Local Storage
 
-## Folder Structure
+## Steps to Run the Project Locally
+
+### Prerequisites
+- Node.js (v16 or above)
+- npm or yarn
+
+### Installation & Setup
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd Dashboard

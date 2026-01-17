@@ -3,9 +3,9 @@ import { useAuth } from "../context/AuthContext";
 
 const ProtectedRoute = ({ children }) => {
   const auth = useAuth();
-  const isAuthenticated = auth?.isAuthenticated; // safety check
+  const isAuthenticated = auth?.isAuthenticated; 
 
-  if (!children) return null; // prevent crash if children missing
+  if (!children) return null; 
 
   return isAuthenticated ? children : <Navigate to="/" replace />;
 };
